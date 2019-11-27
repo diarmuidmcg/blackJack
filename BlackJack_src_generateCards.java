@@ -14,66 +14,35 @@ public class generateCards {
         return firstCard;
     }
     // this converts the number into a string that will be the face value of the card
+    // used for first cards
     public static String getFaceValue(){
         int NumberOnCard = getNumberOnCard();
         String faceValue = "";
-        if (NumberOnCard == 1) {
-            faceValue = "Ace";
-            return faceValue;
+        if (NumberOnCard == 1)          faceValue = "Ace";
+        else if (NumberOnCard >= 2 && NumberOnCard <= 10) {
+                                        faceValue = Integer.toString(NumberOnCard);
         }
-        else if (NumberOnCard >= 2 && NumberOnCard <= 10){
-            faceValue = Integer.toString(NumberOnCard);
-            return faceValue;
-        }
-        else if (NumberOnCard == 11){
-            faceValue = "Jack";
-            return faceValue;
-        }
-        else if (NumberOnCard == 12){
-            faceValue = "Queen";
-            return faceValue;
-        }
-        else if (NumberOnCard == 13){
-            faceValue = "King";
-            return faceValue;
-        }
-        else if (NumberOnCard == 50){
-            faceValue = "Ace";
-            return faceValue;
-        }
-        else{
-            faceValue = "your numbers are wrong";
-        }
-        //System.out.println(faceValue);
+        else if (NumberOnCard == 11)    faceValue = "Jack";
+        else if (NumberOnCard == 12)    faceValue = "Queen";
+        else if (NumberOnCard == 13)    faceValue = "King";
+        else                            faceValue = "your numbers are wrong";
         return faceValue;
     }
-    public static String getFaceValueWithInt(int NumberOnCard){
+
+    // polymorphism
+    public static String getFaceValue(int NumberOnCard){
         String faceValue = "";
-        if (NumberOnCard == 1) {
-            faceValue = "Ace";
-            return faceValue;
+        if (NumberOnCard == 1)          faceValue = "Ace";
+        else if (NumberOnCard >= 2 && NumberOnCard <= 10) {
+                                        faceValue = Integer.toString(NumberOnCard);
         }
-        if (NumberOnCard >= 2 && NumberOnCard <= 10){
-            faceValue = Integer.toString(NumberOnCard);
-            return faceValue;
-        }
-        if (NumberOnCard == 11){
-            faceValue = "Jack";
-            return faceValue;
-        }
-        if (NumberOnCard == 12){
-            faceValue = "Queen";
-            return faceValue;
-        }
-        if (NumberOnCard == 13){
-            faceValue = "King";
-            return faceValue;
-        }
-        else{
-            faceValue = "your numbers are wrong";
-        }
-        //System.out.println(faceValue);
+        else if (NumberOnCard == 11)    faceValue = "Jack";
+        else if (NumberOnCard == 12)    faceValue = "Queen";
+        else if (NumberOnCard == 13)    faceValue = "King";
+        else                            faceValue = "your numbers are wrong";
         return faceValue;
     }
 }
+
+
 
